@@ -1,0 +1,18 @@
+header {
+    text-align: center;
+}
+.chromosomes{
+    display: flex;
+}
+.chromosome {
+    width: 150px;
+    padding: 20px 40px;
+}
+.chromosome label {
+    font-size: 28px;
+    /* width: 100%; */
+}
+.chromosome input {
+    width: 100%;
+    font-size: 40px;
+}
