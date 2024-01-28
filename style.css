@@ -1,18 +1,48 @@
 header {
     text-align: center;
 }
+.wrapper{
+    display: block;
+}
 .chromosomes{
     display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 .chromosome {
     width: 150px;
     padding: 20px 40px;
 }
-.chromosome label {
+label {
     font-size: 28px;
     /* width: 100%; */
 }
-.chromosome input {
+input {
     width: 100%;
+    font-size: 40px;
+    border-radius: 10px;
+}
+
+.additionalData, .mathFormula {
+    display: flex;
+    justify-content: center;
+}
+.addData, .mathData {
+    width: 150px;
+    padding: 20px 40px;
+}
+/* .mathFormula {
+} */
+p {
+    text-align: center;
+    font-size: 28px;
+}
+
+.formSubmit{
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+}
+button{
     font-size: 40px;
 }

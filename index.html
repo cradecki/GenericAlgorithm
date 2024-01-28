@@ -1,31 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Generic Algorithm</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <header>
-        <h1>Zad 2 - Podstawowy algorytmgenetyczny - wyszukiwanie maksimum funkcji na zadanym przedziale <0,31></h1>
+      <h1>
+        Zad 2 - Podstawowy algorytmgenetyczny - wyszukiwanie maksimum funkcji na
+        zadanym przedziale <0,31>
+      </h1>
     </header>
 
     <section>
-        <div class="wrapper">
-            <div class="mattFormula">
-                Math formula:  a*x<sup>3</sup> + b*x<sup>2</sup> + c*x + d
-            </div>
-            <div class="dataTask">
-                <form name="dataForTask" action="" method="get">
+      <div class="wrapper">
+        <form name="dataForTask" action="" method="get">
+          <div class="dataTask">
+            <div class="chromosomes"></div>
 
-                    <div class="chromosomes"></div>
-
-                </form>
+            <div class="additionalData">
+              <div class="addData">
+                <label for="Pk">Pk:</label>
+                <input
+                  type="number"
+                  id="Pk"
+                  step="0.1"
+                  placeholder="0.8"
+                  max="1"
+                  min="0"
+                />
+              </div>
+              <div class="addData">
+                <label for="Pm">Pm:</label>
+                <input
+                  type="number"
+                  id="Pm"
+                  step="0.1"
+                  placeholder="0.2"
+                  max="1"
+                  min="0"
+                />
+              </div>
             </div>
-        </div>
+          </div>
+
+          <p>Math formula: ax<sup>3</sup> + bx<sup>2</sup> + cx + d</p>
+
+          <div class="mathFormula">
+            <div class="mathData">
+              <label for="a">a:</label>
+              <input type="number" id="a" placeholder="-1" />
+            </div>
+            <div class="mathData">
+              <label for="a">b:</label>
+              <input type="number" id="b" placeholder="32" />
+            </div>
+            <div class="mathData">
+              <label for="a">c:</label>
+              <input type="number" id="c" placeholder="0" />
+            </div>
+            <div class="mathData">
+              <label for="a">d:</label>
+              <input type="number" id="d" placeholder="5" />
+            </div>
+          </div>
+          <div class="formSubmit">
+            <input class="calculate" type="button" value="Oblicz" />
+          </div>
+        </form>
+      </div>
     </section>
 
-    <script src="script.js"></script>
-</body>
+    <script type="module" src="script.js"></script>
+  </body>
 </html>
