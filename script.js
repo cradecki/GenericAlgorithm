@@ -35,18 +35,28 @@ const addChromosomeInput = () => {
 addChromosomeInput();
 
 const downloadData = () => {
-  // Event.preventDefault();
+  defaultValues.Pk = parseFloat(
+    document.getElementById("Pk").value || defaultValues.Pk
+  );
+  defaultValues.Pm = parseFloat(
+    document.getElementById("Pm").value || defaultValues.Pm
+  );
+  defaultValues.a = parseFloat(
+    document.getElementById("a").value || defaultValues.a
+  );
+  defaultValues.b = parseFloat(
+    document.getElementById("b").value || defaultValues.b
+  );
+  defaultValues.c = parseFloat(
+    document.getElementById("c").value || defaultValues.c
+  );
+  defaultValues.d = parseFloat(
+    document.getElementById("d").value || defaultValues.d
+  );
 
-  defaultValues.Pk = parseFloat(document.getElementById("Pk").value || 0.8);
-  defaultValues.Pm = parseFloat(document.getElementById("Pm").value || 0.2);
-  defaultValues.a = parseFloat(document.getElementById("a").value || -1);
-  defaultValues.b = parseFloat(document.getElementById("b").value || 32);
-  defaultValues.c = parseFloat(document.getElementById("c").value || 0);
-  defaultValues.d = parseFloat(document.getElementById("d").value || 5);
-
-  for (let i = 1; i <= chromosomesNumber; i++) {
-    const chromosomeValue = document.getElementById(`ch${i}`).value;
-    chromosome.push(chromosomeValue);
+  for (let i = 0; i < chromosomesNumber; i++) {
+    const chromosomeValue = document.getElementById(`ch${i + 1}`).value;
+    chromosome[i] = chromosomeValue;
   }
 
   evolve();
